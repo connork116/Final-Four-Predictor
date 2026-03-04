@@ -16,7 +16,7 @@ NOTE: Used RStudio to run .R files
 
 ## Key Findings
 
-1. **Overall team strength dominates** - barthag accounted for 27-54% of model importance
+1. **Overall team strength dominates** - barthag indicates high importance
 2. **Simpler models competed well** - Logistic Regression had highest AUC despite being least complex
 3. **High AUC can mislead** - With 99% class imbalance, precision/recall are more honest metrics
 4. **58% recall beats expert brackets** - Better than most human predictions
@@ -53,38 +53,11 @@ NOTE: Used RStudio to run .R files
 | `team` | Team name |
 | `year` | Tournament year (2008-2024) |
 
-### Feature Importance
-**Random Forest Top 5**:
-1. barthag (26.9%)
-2. wab (17.4%)
-3. seed_filled (16.1%)
-4. adj_o (11.7%)
-5. elite_seed (10.3%)
-
-**XGBoost Top 5**:
-1. barthag (54.4%)
-2. seed_filled (21.5%)
-3. adj_t (6.0%)
-4. adj_d (4.4%)
-5. adj_o (4.3%)
-
 ## Installation
 
 ```bash
 pip install pandas numpy scikit-learn xgboost imbalanced-learn matplotlib seaborn jupyter
 jupyter notebook
-```
-
-## Repository Structure
-```
-├── notebooks/
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_feature_engineering.ipynb
-│   ├── 03_logistic_regression.ipynb
-│   ├── 04_random_forest.ipynb
-│   ├── 05_xgboost.ipynb
-│   └── 06_model_comparison.ipynb
-
 ```
 
 ## Key Lessons
@@ -93,4 +66,3 @@ jupyter notebook
 - SMOTE requires threshold tuning (default 0.5 assumes balanced classes)
 - For imbalanced data, prioritize precision/recall over accuracy
 - March Madness remains beautifully unpredictable
--
